@@ -1,0 +1,9 @@
+/* Optional small enhancements */
+code, pre {
+    font-family: "Fira Code", monospace;
+    font-size: 0.95rem;
+}
+
+a:hover {
+    transition: 0.2s;
+}

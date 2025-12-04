@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SmartCrops MVP – Technical Documentation</title>
+
+    <!-- TailwindCSS CDN (GitHub Pages Compatible) -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- Optional custom overrides -->
+    <link href="./assets/css/custom.css" rel="stylesheet">
+
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- HEADER / NAV -->
+    <header class="w-full bg-white shadow">
+        <div class="max-w-6xl mx-auto px-5 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-semibold text-gray-700">SmartCrops MVP</h1>
+
+            <nav class="space-x-6 text-gray-600 font-medium">
+                <a href="#docs" class="hover:text-blue-600">Documentation</a>
+                <a href="#architecture" class="hover:text-blue-600">Architecture</a>
+                <a href="#diagrams" class="hover:text-blue-600">Diagrams</a>
+                <a href="#contact" class="hover:text-blue-600">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="py-20 bg-gradient-to-b from-white to-gray-100">
+        <div class="max-w-5xl mx-auto px-5 text-center">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">SmartCrops – Autonomous Hydroponic Platform</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">SmartCrops is an autonomous IoT + Edge platform for Flood & Drain hydroponic automation.
+It runs all control logic locally through an ESP32 + Fastify backend, ensuring real-time reliability even offline.
+Sensor data flows through an MQTT event-driven pipeline and is stored in a PostgreSQL time-series engine.
+A secure, read-only cloud dashboard provides remote visibility via outbound-only synchronization.
+Designed with a Zero Trust model, SmartCrops delivers a resilient, scalable foundation for modern agritech systems.</p>
+
+            <div class="mt-10 space-x-4">
+                <a href="./docs/FSR/SmartCrops-FSR.md" class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700">
+                    View FSR
+                </a>
+                <a href="./docs/SAD/SmartCrops-SAD.md" class="bg-gray-800 text-white px-6 py-3 rounded-lg shadow hover:bg-gray-900">
+                    View SAD
+                </a>
+                <a href="./docs/ADR/SmartCrops-ADR.md" class="bg-green-600 text-white px-6 py-3 rounded-lg shadow hover:bg-green-700">
+                    ADR Index
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3-COLUMN HIGHLIGHTS -->
+    <section class="py-16">
+        <div class="max-w-6xl mx-auto px-5 grid grid-cols-1 md:grid-cols-3 gap-10">
+            
+            <div class="bg-white shadow rounded-lg p-6">
+                <h3 class="text-xl font-semibold text-gray-700 mb-3">IoT + Edge Architecture</h3>
+                <p>Local automation engine with MQTT, ESP32 MCU integration and relay control.</p>
+            </div>
+            
+            <div class="bg-white shadow rounded-lg p-6">
+                <h3 class="text-xl font-semibold text-gray-700 mb-3">Zero Trust Security Model</h3>
+                <p>No inbound traffic, TLS everywhere, outbound-only cloud sync.</p>
+            </div>
+
+            <div class="bg-white shadow rounded-lg p-6">
+                <h3 class="text-xl font-semibold text-gray-700 mb-3">Cloud Visualization</h3>
+                <p>GCP VPS-based dashboard with Clerk authentication and read-only views.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- DIAGRAMS -->
+    <section id="diagrams" class="py-16">
+        <div class="max-w-6xl mx-auto px-5">
+            <h2 class="text-3xl font-bold mb-6">Technical Diagrams</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <a href="./docs/diagrams/01-context.md" class="block bg-white p-6 rounded shadow hover:shadow-lg border">
+                    <h3 class="text-xl font-semibold">1. C4 – System Context</h3>
+                    <p class="text-gray-600">High-level system interactions.</p>
+                </a>
+
+                <a href="./docs/diagrams/02-containers.md" class="block bg-white p-6 rounded shadow hover:shadow-lg border">
+                    <h3 class="text-xl font-semibold">2. C4 – Containers</h3>
+                    <p class="text-gray-600">Edge and cloud container layout.</p>
+                </a>
+
+                <a href="./docs/diagrams/03-components-backend.md" class="block bg-white p-6 rounded shadow hover:shadow-lg border">
+                    <h3 class="text-xl font-semibold">3. Components (Edge Backend)</h3>
+                    <p class="text-gray-600">Automation engine and subsystems.</p>
+                </a>
+
+                <a href="./docs/diagrams/04-iot-hardware.md" class="block bg-white p-6 rounded shadow hover:shadow-lg border">
+                    <h3 class="text-xl font-semibold">4. IoT Hardware Integration</h3>
+                    <p class="text-gray-600">ESP32 + sensors + actuators.</p>
+                </a>
+
+                <a href="./docs/diagrams/05-security-network.md" class="block bg-white p-6 rounded shadow hover:shadow-lg border">
+                    <h3 class="text-xl font-semibold">5. Network & Security</h3>
+                    <p class="text-gray-600">Zero Trust Architecture.</p>
+                </a>
+
+                <a href="./docs/diagrams/06-dataflow.md" class="block bg-white p-6 rounded shadow hover:shadow-lg border">
+                    <h3 class="text-xl font-semibold">6. End-to-End Data Flow</h3>
+                    <p class="text-gray-600">Telemetry pipeline architecture.</p>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT FOOTER -->
+    <footer id="contact" class="py-16 bg-gray-800 text-gray-200">
+        <div class="max-w-6xl mx-auto px-5">
+
+            <h2 class="text-2xl font-bold mb-4">Contact</h2>
+
+            <p class="text-lg">IoT & Hardware Engineer: <strong>Miguel Ladines</strong></p>
+            <p>Email: <a href="mailto:ladinesmiguel770@gmail.com" class="text-blue-400 hover:underline">ladinesmiguel770@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://linkedin.com/in/ladinesmiguel" class="text-blue-400 hover:underline">linkedin.com/in/ladinesmiguel</a></p>
+            <p>GitHub: <a href="https://github.com/dev-mikel" class="text-blue-400 hover:underline">github.com/dev-mikel</a></p>
+
+        </div>
+    </footer>
+
+</body>
+</html>
