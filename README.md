@@ -17,7 +17,7 @@
 
 ---
 
-<img src="public/00-highlevel.svg" alt="SmartCrops — High-level Architecture" width="100%" />
+<img src="public/architechture-smartcrops.png" alt="SmartCrops — Local-First Autonomous Hydroponic Control System Architecture" width="100%" />
 
 ## Table of Contents
 
@@ -66,6 +66,10 @@ Commercial Flood & Drain hydroponic systems require simultaneous, uninterrupted 
 This repository is Phase I of the SmartCrops platform: the complete pre-development architecture package. The deliverable is six C4 model diagrams plus a full FSR, SAD, and ADR set — not running source code. The diagrams below are the committed design outputs.
 
 ### 2.1 C4 Architecture Diagrams
+
+**High-level Architecture Overview**
+
+<img src="public/00-highlevel.svg" alt="SmartCrops — High-level Architecture" width="100%" />
 
 **System Context (C4 L1)**
 
@@ -199,6 +203,7 @@ Pre-development architecture package — no source code. All documents are direc
 ```
 smartcrops/
 ├── public/
+│   ├── architechture-smartcrops.png # Cover — architecture overview
 │   ├── 00-highlevel.svg             # High-level architecture overview
 │   ├── 01-context.svg               # C4 L1 — System Context
 │   ├── 02-containers.svg            # C4 L2 — Container Architecture
